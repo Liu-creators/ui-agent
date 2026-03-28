@@ -1,0 +1,23 @@
+# UI-Agent Configuration
+# All values can be overridden by environment variables (see .env.example)
+
+# LLM Settings
+llm_provider: openai         # openai | deepseek | ollama
+llm_model: gpt-4o            # model name
+# openai_api_key: sk-...     # set via OPENAI_API_KEY env var
+# openai_base_url: ~         # override for DeepSeek or custom endpoints
+
+# Browser Settings
+headless: false              # set to true for server/CI environments
+browser_timeout: 30000       # milliseconds
+slow_mo: 0                   # slow motion (ms) for debugging
+
+# Agent Settings
+max_steps: 20                # max steps before giving up
+screenshot_mode: true        # take screenshots for visual observation
+dom_mode: true               # also use DOM text for observation
+
+# Logging
+log_level: INFO              # DEBUG | INFO | WARNING | ERROR
+save_screenshots: false      # save screenshots to disk
+screenshot_dir: ./screenshots
